@@ -5,7 +5,7 @@ import useFetch from '../hooks/useFetch';
 
 const HireDriver = ({ onClose, onDriverHire }) => {
 
-    const { data, loading } = useFetch(`https://project-z0fb.onrender.com/drivers`);
+    const { data, loading } = useFetch(`https://rentwheel-backend.onrender.com/server/drivers`);
     console.log(data);
 
 

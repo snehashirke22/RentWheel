@@ -10,7 +10,7 @@ const ResetPassword = ({ token }) => {
         
         try {
            
-            const response = await fetch('https://project-z0fb.onrender.com/auth/resetpassword', {
+            const response = await fetch('https://rentwheel-backend.onrender.com/server/auth/resetpassword', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -43,7 +43,7 @@ const Login = () => {
 
       const { email, password } = formValues;
       try {
-          const res = await fetch('https://project-z0fb.onrender.com/server/auth/login', {
+          const res = await fetch('https://rentwheel-backend.onrender.com/server/auth/login', {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

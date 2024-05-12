@@ -31,7 +31,7 @@ const VehicleDetail = () => {
         // Fetch vehicle details based on vehicleId
         const fetchVehicleDetails = async () => {
             try {
-                const response = await fetch(`https://project-z0fb.onrender.com/vehicles/${vehicleId}`);
+                const response = await fetch(`https://rentwheel-backend.onrender.com/server/vehicles/${vehicleId}`);
                 const data = await response.json();
                 setVehicleDetails(data);
             } catch (error) {
@@ -125,7 +125,7 @@ const VehicleDetail = () => {
         };
     
         try {
-            const sessionResponse = await fetch("https://project-z0fb.onrender.com/stripe/create-checkout-session", {
+            const sessionResponse = await fetch("https://rentwheel-backend.onrender.com/server/stripe/create-checkout-session", {
                 method: "POST",
                 headers: headers,
                 body: JSON.stringify(sessionBody)
@@ -143,7 +143,7 @@ const VehicleDetail = () => {
             if (result.error) {
                 console.error('Stripe redirect error:', result.error);
             } else {
-                const reservationResponse = await fetch("https://project-z0fb.onrender.com/reservation", {
+                const reservationResponse = await fetch("https://rentwheel-backend.onrender.com/server/reservation", {
                     method: "POST",
                     headers: headers,
                     body: JSON.stringify(reservationBody)

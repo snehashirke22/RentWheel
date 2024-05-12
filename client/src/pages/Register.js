@@ -55,7 +55,7 @@ const Register = () => {
 
     const { name, email, password, confirmpassword } = formValues;
     try {
-      const res = await fetch('https://project-z0fb.onrender.com/server/auth/register', {
+      const res = await fetch('https://rentwheel-backend.onrender.com/server/auth/register', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
